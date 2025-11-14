@@ -1,14 +1,28 @@
 {
-  "name": "01-foundation",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^5.15.7"
-  }
+	"name": "01-foundation",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"format": "npm run format:biome && npm run format:prettier",
+		"format:biome": "biome format --write .",
+		"format:prettier": "prettier --write \"**/*.astro\"",
+		"format:check": "npm run format:check:biome && npm run format:check:prettier",
+		"format:check:biome": "biome format .",
+		"format:check:prettier": "prettier --check \"**/*.astro\"",
+		"lint": "biome lint .",
+		"lint:fix": "biome lint --write .",
+		"check": "npm run format && npm run lint:fix"
+	},
+	"dependencies": {
+		"astro": "^5.15.7"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.5",
+		"prettier": "3.6.2",
+		"prettier-plugin-astro": "0.14.1"
+	}
 }

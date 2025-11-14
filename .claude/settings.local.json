@@ -1,0 +1,14 @@
+{
+	"permissions": {
+		"allow": [
+			"Bash(npm install:*)",
+			"Bash(npm run format:check:*)",
+			"Bash(npx biome migrate --write)",
+			"Bash(npm run format:*)",
+			"Bash(npm run lint)",
+			"Bash(npm run check:*)"
+		],
+		"deny": [],
+		"ask": []
+	}
+}

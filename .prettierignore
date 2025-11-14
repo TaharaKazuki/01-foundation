@@ -1,0 +1,17 @@
+# Biomeがフォーマットするファイルは除外
+*.js
+*.jsx
+*.ts
+*.tsx
+*.mjs
+*.cjs
+*.json
+*.jsonc
+
+# ビルド成果物とnode_modules
+node_modules/
+dist/
+.astro/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
